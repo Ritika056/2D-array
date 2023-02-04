@@ -1,0 +1,44 @@
+#include <stdio.h>
+int main()
+{
+     int a[3][3],i,j,k,s1=0,s2=0;
+     printf("Enter Elements for Matrix: ");
+     /*Reads the numbers or elements for 3*3 matrix*/
+     for(i=0;i<=2;i++)
+          for(j=0;j<=2;j++)
+          {
+               scanf("%d",&a[i][j]);
+          }
+     /* For printing the elements in matrix form*/
+     printf("Matrix is:\n");
+     for(i=0;i<=2;i++)
+     {
+          for(j=0;j<=2;j++)
+          {
+               printf("%d ",a[i][j]);
+          }
+          printf("\n");
+     }
+     /* To print and sum of middle row elements*/
+     printf("Middle Row Elements: ");
+     for(k=0;k<=2;k++)
+     {
+          s1=s1+a[1][k];
+          printf("%d ",a[1][k]);
+     }
+     printf("\nSum of Middle Row Elements : %d",s1);
+     /* To print and sum of middle column elements*/
+     printf("\nMiddle Column Elements : ");
+     for(k=0;k<=2;k++)
+     {
+          s2=s2+a[k][1];
+          printf("%d ",a[k][1]);
+     }
+     printf("\nSum of Middle Column Elements : %d",s2);
+     /* Check the of middle row EQUALS to middle column */
+     if(s1==s2)
+          printf("\nHence, Sum of both row and column is EQUAL");
+     else
+          printf("\nHence, Sum of both row and column is NOT EQUAL");
+     return 0;
+}
